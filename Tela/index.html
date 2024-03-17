@@ -1,0 +1,171 @@
+<DOCTYPE! html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="estilo.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Oxygen&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="topo">
+        <a href="index.html"><img src="imagem/logo.png" style="max-width: 18%; min-width: 10%; height: auto; "></a>
+    </div>
+
+    <div class="linha">
+
+        <div class="totalcolumn">
+
+            <div class="topnav" id="myTopnav">
+                <a href="#">Início</a>
+                <a href="#">Mais vendidos</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Por categoria 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Produto 1</a>
+                        <a href="#">Produto 2</a>
+                        <a href="#">Produto 3</a>
+                        <a href="#">Produto 4</a>
+                    </div>
+                </div> 
+                <a href="#">Sobre nós</a>
+                <a href="#" class="active" style="float:right;"><b>Login</b></a>
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+            </div>
+                  
+            <script>
+                function myFunction() {
+                var x = document.getElementById("myTopnav");
+                if (x.className === "topnav") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "topnav";
+                }
+            }
+            </script>
+
+
+            <div class="card">
+
+
+				<div class="flex-container1">
+
+					<div class="tracking-out-contract" style="font-size: 30px;font-family: Arimo;text-align: center;">
+						Novos produtos
+					</div>
+
+					<div class="slideshow-container">
+
+						<div class="mySlides fade">
+							<img src="imagem/prod1.webp" style="width:100%;">
+								<div class="texto">Bong de Vidro Mona Brisa</div>
+								<div class="preco">R$ 39,90</div>
+								<div class="desc"><b>R$ 35,00</b> à vista com desconto no Pix</div>
+						</div>
+						
+						<div class="mySlides fade">
+							<img src="imagem/prod2.webp" style="width:100%;">
+								<div class="texto">Seda Papelito Brown Slim</div>
+								<div class="preco">R$ 3,00</div>
+								<div class="desc"><b>R$ 2,70</b> à vista com desconto no Pix</div>
+						</div>
+
+						<div class="mySlides fade">
+
+							<img src="imagem/prod3.webp" style="width:100%">
+							<div class="texto">Tesoura em Metal para Tabaco ABDZ Dobrável</div>
+								<div class="preco">R$ 18,90</div>
+								<div class="desc"><b>R$ 17,00</b> à vista com desconto no Pix</div>
+						</div>
+						
+					</div><br>
+						
+						<div style="text-align:center">
+							<span class="dot"></span> 
+							<span class="dot"></span> 
+							<span class="dot"></span> 
+						</div>
+
+						<script>
+							let slideIndex = 0;
+							showSlides();
+							
+							function showSlides() {
+							  let i;
+							  let slides = document.getElementsByClassName("mySlides");
+							  let dots = document.getElementsByClassName("dot");
+							  for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";  
+							  }
+							  slideIndex++;
+							  if (slideIndex > slides.length) {slideIndex = 1}    
+							  for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							  }
+							  slides[slideIndex-1].style.display = "block";  
+							  dots[slideIndex-1].className += " active";
+							  setTimeout(showSlides, 5000); 
+							}
+							</script>
+
+				</div>	
+
+			<div class="card">
+
+                <div class="tracking-out-contract" style="font-size: 30px;font-family: Arimo;text-align: center;">
+                    Os mais vendidos
+                </div>
+
+                <div class="flex-container4">
+
+                    <div class="produto">
+                        <img src="imagem/prod1.webp" style="width: 100%;height:auto;">
+                        <div class="texto">Bong de Vidro Mona Brisa</div>
+								<div class="preco">R$ 39,90</div>
+								<div class="desc"><b>R$ 35,00</b> à vista com desconto no Pix</div>
+                    </div>
+
+                    <div class="produto">
+                        <img src="imagem/prod2.webp" style="width: 100%;height:auto;">
+                        <div class="texto">Bong de Vidro Mona Brisa</div>
+								<div class="preco">R$ 39,90</div>
+								<div class="desc"><b>R$ 35,00</b> à vista com desconto no Pix</div>
+                    </div>
+
+                    <div class="produto">
+                        <img src="imagem/prod3.webp" style="width: 100%;height:auto;">
+                        <div class="texto">Bong de Vidro Mona Brisa</div>
+								<div class="preco">R$ 39,90</div>
+								<div class="desc"><b>R$ 35,00</b> à vista com desconto no Pix</div>
+                    </div>
+
+                </div>
+
+                <div class="imagem1"></div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="rodape">
+
+		<div class="flex-container1">
+			<img src="imagem/logo.png" style="max-width:150px;height: auto;">
+			<div class="texto1">Este site foi desenvolvido para fins acadêmicos.</div><p>
+			<div class="texto1">Cara de Cavalo Tabacaria &trade; 2024-2024</div>
+
+    	</div>
+		
+	</div>
+
+</body>
+
+</html>
