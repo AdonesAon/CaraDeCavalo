@@ -3,10 +3,12 @@
 	<head>
 		<title>Página Inicial</title>
 		<meta charset="UTF-8">
-		<link rel="stylesheet" href="">
+    
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
 		<link rel="stylesheet" type="text/css" href="estilo.css">
 		<link rel="stylesheet" href="./responsivo1.css">
+		<link rel="stylesheet" href="maioridade.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +22,8 @@
 	</head>
 
 	<body>
+
+	
 
 		<div class="topo">
 
@@ -61,13 +65,46 @@
 
 		</div>
 
+		<div id="confirmacaoIdade" class="modal">
+			<div class="modal-content">
+			  <h2 class="titulo-idade">Esta loja virtual pode possuir conteúdo impróprio para menores de 18 anos</h2>😁<br>
+			  <p>Deseja prosseguir?</p>
+			  <div class="button-container">
+				<button onclick="confirmAge(true)">Sim</button>
+				<button onclick="confirmAge(false)">Não</button>
+			  </div>
+			</div>
+		  </div>
+
+
+			<!-- Aqui começa o código de verificação de idade-->
+		  
+		  <script src="script.js"></script>
+		  <script>
+			// Verificação de idade
+			document.addEventListener("DOMContentLoaded", function() {
+			  document.getElementById("confirmacaoIdade").classList.remove("hidden");
+			});
+		
+			function confirmAge(isOver18) {
+			  if (isOver18) {
+				document.getElementById("confirmacaoIdade").classList.add("hidden");
+				document.getElementById("mainContent").classList.remove("hidden");
+				window.location.href = "index.html";//redireciona para a página principal do site.(index)
+			  } else {
+				window.location.href = "https://www.google.com.br/"; // Redireciona de volta para a página google.
+			  }
+			}
+		  </script>
+
+			<!-- Aqui termina o código de verificação de idade-->
+			
 		<div class="card">
 
 			<div class="flex-container1">
 
 				<div class="tracking-out-contract" style="font-size: 30px;font-family: Arimo;text-align: center;">
-					<br>
-					<p>Novos produtos</br></p>
+					Novos produtos
 				</div>
 
 				<div class="slideshow-container">
@@ -241,16 +278,16 @@
 			<div id="footer_content">
 				<div id="footer_contacts">
 					<h1>Saiba+</h1>
-					<p>fale com a Cara de cavalo.</p>
+					<p>Fale com a Cara de cavalo.</p>
 
 					<div id="footer_social_midia">
-						<a href="%" class="footer-link" id="instagram">
+						<a href="https://www.instagram.com/caradecavaloheadshopac?igsh=N2Nzb3l0b2d5YmQw" class="footer-link" id="instagram">
 							<i class="fa-brands fa-instagram"></i>
 						</a>
-						<a href="%" class="footer-link" id="facebook">
+						<a href="https://www.facebook.com/profile.php?id=100064049863088" class="footer-link" id="facebook">
 							<i class="fa-brands fa-facebook-f"></i>
 						</a>
-						<a href="%" class="footer-link" id="whatsapp">
+						<a href="https://wa.me/5561999999999" class="footer-link" id="whatsapp">
 							<i class="fa-brands fa-whatsapp"></i>
 						</a>
 					</div>
@@ -305,10 +342,11 @@
 			</div>
 			<div id="footer_copyright">
 				&#169
-				2024 all rights reserve
+				2024 Cara de Cavalo Headshop
 			</div>
 		</footer>
-
+	 
+     
 	</body>
 
 	</html>

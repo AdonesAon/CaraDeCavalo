@@ -3,13 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    
- background-image: linear-gradient(45deg, rgb(17, 200, 236), rgba(125, 7, 121, 0.97));
- font-family: "poppins", sans-serif;
-    margin: 0 auto;
-
-   
+body{ 
+	background: white; 
+	font-family: "Arimo", sans-serif;
+    margin: auto; 
 }
 
 .topo {
@@ -19,20 +16,20 @@ body{
     background: linear-gradient(0deg, rgba(12, 214, 238, 1) 0%, rgba(207, 149, 231, 1) 59%);
 }
 
-
-
-
+.section{
+	padding: 10px;
+	margin: 0;
+}
 .main-section {
-    padding: 40px 0 64px;
+    padding: 80px;
 }
 
 .texto{
-  
     display: flex;
     min-height: calc(100vh - 125px);
     align-items: center;
-    gap: 60px
-   
+    gap: 60px;  
+	padding: 50px;
 }
 
 .texto .informacoes{
@@ -55,7 +52,7 @@ body{
     font-family: "Raleway",sans-serif;
     font-size: 20px;
     margin-bottom: 10px;
-    color: #eee6e6;
+    color: black;
    
 }
 
@@ -111,36 +108,14 @@ body{
     margin: 0 auto;
 }
 
-
 .section-title {
-    font-family: "raleway", sans-serif;
-    font-size: 32px
-}
-
-.section-title {
+	font-family: "raleway", sans-serif;
+    font-size: 32px;
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 65px;
     font-size: 65px;
 }
-
-.rodape{
-    padding: 50px;
-    /*background: rgb(12,214,238);*/
-    background: linear-gradient(0deg, rgba(207,149,231,1) 0%, rgb(49, 127, 136) 59%), rgb(18, 157, 173);
-    margin-top: 150px;
-    color:white;
-	height: auto;
-	display: flex;
-	flex-direction: column;
-}
-
-.redess{
-	float: right;
-	bottom: 40px;
-	margin-right: 50px;
-}
-
 
 .products-container {
     display: flex;
@@ -150,17 +125,15 @@ body{
     width: 100%;
 }
 
-
 .mais-vendidos {
     display: flex;
     flex-direction: column;
     align-items:center;
-
 }
 
 nav{
 	text-align: center;
-	margin-top: 10px;
+	padding: 20px;
 	font-family: 'Segoe UI', tahoma, Geneva, Verdana, sans-serif;
 	display: flex;
 	align-items: center;
@@ -173,7 +146,7 @@ nav a{
 	text-decoration: none;
 	font-size: 15pt;
 	position: relative;
-	box-sizing: border-box
+	box-sizing: border-box;
 }
 
 nav a::after{
@@ -203,67 +176,68 @@ nav a.icon {
 	padding: 0px 20px 5px 0;
 	font-size: 10pt;
     }
-
+	
+.mais-vendidos{
+	width: 250px;
+	height: 390px;
+	background: white;
+	border-radius: 10px;
+    border: 2px solid rgb(234, 7, 246);  
+}
 
 .product-title {
     font-size: 20px;
     margin-bottom: 25px;
-   
+	padding: 15px;
+	text-align: center;
 }
 
 .product-image {
     width: 240px;
-    height: 200px;
-    border-radius: 10px;
-    border: 2px solid rgb(234, 7, 246);
-    
-   
-}
-
-
-.product-price-container{
-    margin-top: 8px;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-
-
+    height: 200px; 
 }
 
 .product-price{
-margin-right: 12px;
+padding: 10px;
 font-family: "Raleway", sans-serif;
 font-weight: bold;
-
 }
 
 .button-hover-background{
-    background-color:rgb(13, 176, 194);;
+    background-color:black;
     color: white;
-    border: 2px solid rgb(18, 16, 18);
+    border: transparent;
     border-radius: 6px;
-    padding: 4px 2px;
+    padding: 7px;
     font-weight: bold;
     cursor: pointer ;
     transition: 0.2s;
 
 }
 .button-hover-background:hover{
-    background-color: transparent;
-    color:rgb(229, 237, 241);
+    background-color: #1FFF00;
+    color:black;
+	transform: scale(1.10);
+  	transition-duration: 0.5s;
 }
 
 
 .titulo-carrinho {
     text-align: center;
-    font-family: "poppins", sans-serif;
+    font-family: "oxygen", sans-serif;
     padding: 50px 30px;
     font-size: 50px;
 }
 
+.carrinho{
+	position: relative;
+	margin: 0;
+	padding: 10%;
+}
+
 .cart-table {
-    width: 100%;
+	width: 100%;
+	height: auto;
     border-collapse: collapse;
 }
 
@@ -272,7 +246,7 @@ font-weight: bold;
     border-top: 5px solid #0c0c0c1d;
     padding-bottom: 6px;
     text-transform: uppercase;
-
+	
 }
 
 .second-col {
@@ -317,8 +291,6 @@ font-weight: bold;
 
 }
 
-
-
 .remove-product-button {
     margin-left: 12px;
     background-color: #a221a8;
@@ -349,12 +321,12 @@ font-weight: bold;
 
 .purchase-button {
     display: flex;
-    margin: 100px auto 0;
+    margin: 80px auto 0;
     background-color: #56c5db;
     color: var(--white);
     border: 0;
     border-radius: 6px;
-    padding: 16px 20px;
+    padding: 25px 40px;
     text-transform: uppercase;
     font-size: 20px;
     font-weight: bold;
@@ -362,8 +334,170 @@ font-weight: bold;
 
 .purchase-button:hover {
     filter: brightness(0.9);
-    transition: 0.2s;
+	background-color: #1FFF00;
+  	transition-duration: 0.5s;
 }
+
+
+/* Formatação Footer! 
+	25/04 
+	ps: Pablo*/
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+    :root{
+        --color-neutral-0: #0e0c0c;
+        --color-neutral-10: #171717;
+        --color-neutral-30: #a8a29e;
+        --color-neutral-40: #f5f5f5;
+    }
+    
+    
+    footer{
+        width: 100%;
+        color: var(--color-neutral-40);
+    }
+    
+    .footer-link{
+        text-decoration: none;
+    }
+    
+    #footer_content{
+        background-color: var(--color-neutral-10);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 3rem 3.5rem;
+    }
+    
+    #footer_contacts p{
+        color: var(--color-neutral-40);
+    }
+    
+    #footer_contacts h1{
+        margin-bottom: 0.75rem;
+    }
+    
+    #footer_social_midia{
+        display: flex;
+        gap: 2rem;
+        margin-top: 1.5rem;
+    }
+    #footer_social_midia .footer-link{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 2.5rem;
+        width: 2.5rem;
+        color: var(--color-neutral-40);
+        border-radius: 50%;
+        transition: all 0.4s;
+    }
+    
+    #footer_social_midia .footer-link i{
+        font-size: 1.25rem;
+    }
+    
+    #footer_social_midia .footer-link:hover{
+        opacity: 0.8;
+    
+    }
+    
+    #instagram{
+        background: linear-gradient(#7f37c9, #ff2992, #ff9807);
+    }
+    
+    #facebook{
+        background-color: #4267b3;
+    }
+    
+    #whatsapp{
+        background-color: #25d366;
+    }
+    
+    .footer-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        list-style: none;
+    }
+    
+    .footer-list .footer-link{
+        color: var(--color-neutral-30);
+        transition: all 0.4s;
+    }
+    
+    .footer-list .footer-link:hover{
+        color: rgba(207,149,231,1);
+    }
+    
+    #footer_subscribe {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    #footer_subscribe p{
+        color: var(--color-neutral-30);
+    }
+    
+    #input_group {
+        display: flex;
+        align-items: center;
+        background-color: var(--color-neutral-0);
+        border-radius: 4px;
+    }
+    
+    #input_group input{
+        all: unset;
+        padding: 0.75rem;
+        width: 100%;
+    }
+    #input_group button{
+        background-color: rgba(207,149,231,1);
+        border: none;
+        color: var(--color-neutral-40);
+        padding: 0pc 1.25rem;
+        font-size: 1.125rem;
+        height: 100%;
+        border-radius: 0px 4px 4px 0px;
+        cursor: pointer;
+    }
+    
+    #input_group button:hover{
+        opacity: 0.8;
+        transition: all 0.4s;
+    }
+    
+    #footer_copyright {
+        display: flex;
+        justify-content: center;
+        background-color: var(--color-neutral-0);
+        font-size: 0.9rem;
+        padding: 1.5rem;
+        font-weight: 100;
+    }
+    
+    @media screen and (max-width: 768px){
+        #footer_content {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+    
+    }
+    
+    @media screen and (max-width: 426px){
+        #footer_content {
+            grid-template-columns: repeat(1, 1fr);
+            padding: 3rem 2rem;
+        }
+    
+    }
+    
+    
+
+
+
+
+
 
 @media(max-width: 1280px) {
     
@@ -424,6 +558,30 @@ font-weight: bold;
     .texto .container-foto img {
         max-width: 320px;
     }
+
+    nav{
+        color: #F0F8FF;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+   /* diminuí a fonte um pouco */
+    nav a{
+       position: relative;
+       font-size: 15pt;
+       
+    }
+    nav a:hover::after{
+        width: 100%;
+        height: 2px;
+    }
+    .topo nav{
+    text-align: center;
+        
+    }
+
+  
 
 
 
